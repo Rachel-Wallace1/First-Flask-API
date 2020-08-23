@@ -21,7 +21,7 @@ def create_store():
     request_data = request.get_json()
     new_store = {
         'name': request_data['name'],
-        'items':[]
+        'items': request_data['items']
         }
     stores.append(new_store)
     return jsonify(new_store)
